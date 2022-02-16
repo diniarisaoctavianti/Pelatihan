@@ -1,0 +1,68 @@
+Resume DAY 1:
+Version Control and Branch Management (Git) 
+Materi dimana mempelajari bagaimana cara mengatur versi dari source code program. Dengan menggunakan salah satu version control sistem yaitu GIT. Membahas 3 materi yaitu “Introduction and installation”, “setting up and push”, “Branch and Conflic”. 
+
+1. Introduction and Installation 
+Pada tahap ini memperkenalkan apa itu versioning dan GIT serta sejarahnya kemudian cara menginstal nya di windows.
+GIT adalah salah satu version control system popular yang digunakan para developer untuk mengembangkan software secara bersama-sama dengan begitu bisa melakukan “Real World Collaboration”.
+Pemanfaatan GIT ini terdistribusi yang mana setiap orang bisa memiliki kode sendiri-sendiri dan masukan keserver, jadi setiap orang dapat untuk meng edit sehingga sewaktu-waktu centralnya bermaslah setiap orang punya backupnya untuk memperbaiki server yang bermasalah.
+GIT juga dapat melakukan commit (the record of changes).
+
+ 
+2. Setting up and Push
+
+Di tahap Setting up ini sesuah membuat akun git, ada GIT INIT,CLONE,CONFIG.
+-Git config berfungsi sebagai konfigurasi 
+ $ git config --global user.name “rissa oct”
+ $ git config --global user.emial “diniarisa@gmail.com”
+-Git INIT bisa digunakan untuk memulai/start 
+ $ git remote add <remote_name> <remote_repo_url>
+ $ git push -u <remote_name> <local_branch_name>
+-Git Clone berfungsi mengambil repository dari remote
+ $ git clone (link ssh/html)
+ $ cd my-project
+
+Lalu ada saving changes dimana kita melakukan pengecekan status,menambahkan atau memberi komen di setiap perubahan yang kita lakukan dengan command : GIT Status, Add, Commit
+- git add .berfungsi memasukan semua directory distaging area
+- git commit -m "add config file"  yang syaratnya message harus lah jelasss
+- git push origin 
+
+ kemudian ada command: GIT Diff and Stash
+- git diff –stage berfungsi untuk mengetahui bagaimana perubahan area yang diedit
+- git stash fungsinya menyimpan perubahan atau stashing work
+- git stash apply berfungsi untuk re-aplying perubahan
+
+FILE.  gitigrnore
+gitignore berfungsi untuk memfilter mana aja yang bisa masuk kerepository dan tidak dengan *.log atau logs
+
+Selanjutnya ada Inspecting Repository :GIT log and checkout dan Reset
+- git log --oneline berguna untuk menampilkan setiap commit yang dilakukan atu revision lama
+- git checkout (kode) berguna untuk pindah branch
+- git reset kode—soft yaitu perubahannya tidak terjadi sebanyak --hard  
+- git reset kode --hard yaitu bisa mengapus commit tidak bisa kembali atau diakses lagi dan tidak dianjurkan menggunakan –hard.
+
+kemudian pada SYNCING ada comand: GIT push,fetch dan pull
+- git remote -v
+- git remote add origin https....
+- git fetch
+- git pull origin master
+- git push origin master berguna untuk memasukan perubahan ke repository
+
+3. Branch and Conflic
+Pada tahap ini ada command: GIT Branching
+- $ git branch –list, berfungsi untuk menampilkan semua branch
+- $ git branch <branch>, berfungsi untuk membuat branch baru
+- $ git branch -D <branch>, berfungis untuk menghapus 
+- $ git branch -a , berfungsi untuk remote branch
+
+Ada juga  command: GIT Merge
+- git checkout -b new feature master , berguna untuk memulai fitur baru
+- git add <file>
+- git commit -m “Start a feature”
+- git commit -m “Finish a feature”
+- git merge new-feature
+- git branch -d new feature , unutk merge di fitur baru branch.
+
+Kemudian Pull Request and workflow collaboration.
+Mengambil gambaran yaitu saat kita mencoba mengirim request pull kepada seorang untuk melakukan edit pekerjaan pada file yang terjadi kesalahan. 
+Hal yang perlu diperhatikan saat melakukan workflow collaboration agar berjalan dengan efktif kita harus menyiapkan/ membuat branch baru agar base master/central tidak terganggu. Dan jika sudah fix pengeditan pada file kemudian bisa dilakukan merge ke Master. 
